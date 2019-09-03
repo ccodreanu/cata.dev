@@ -1,7 +1,6 @@
 ---
 title: Store your dotfiles on Github
 date: 2019-08-21 16:37:01
-tags: devops
 ---
 Moving to a new system is almost always painful to deal with. From time to time, when I have to reinstall my system, I end up googling for this HN [discussion](https://news.ycombinator.com/item?id=11070797).
 
@@ -9,7 +8,8 @@ So what I do, is saving my dotfiles from my home directory on a Github repositor
 
 Run `git init --bare $HOME/.myconf` to create your empty repository.
 Add an alias to your `.profile` configuration:
-```
+
+```shell
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 ```
 
@@ -19,9 +19,11 @@ Running a `config status` will show you what dotfiles have been modified and are
 
 Restoring the files from Github is a matter of cloning and manually moving your files into place.
 So you run:
-```
+
+```shell
 git clone --separate-git-dir=$HOME/.myconf /path/to/repo $HOME/myconf-tmp
 ```
+
 And then copy or move the files from `~/myconf-tmp` to `.vimrc`, `.gitconfig` and so on.
 
 Done!
