@@ -1,7 +1,6 @@
 ---
 title: Watching for file changes with Python
 date: 2019-09-01 12:00:01
-tags: code
 ---
 Working on [Generatore](https://github.com/picofish/generatore) I wanted to be able to quickly rebuild the website when new changes were introduced to my posts.
 
