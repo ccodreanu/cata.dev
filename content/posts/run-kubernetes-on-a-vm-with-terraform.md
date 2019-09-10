@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-I also like to create my own user on the VM with my `sudo adduser USERNAME`, put my SSH public key in `~/.ssh/authorized_keys` and add the user to `/etc/sudoers` with `sudo visudo`.
+I also like to create my own user on the VM with `sudo adduser USERNAME`, put my SSH public key in `~/.ssh/authorized_keys` and add the user to `/etc/sudoers` with `sudo visudo`.
 
 After you're done with the above, create a simple inventory file for Ansible and a small playbook like this one:
 
