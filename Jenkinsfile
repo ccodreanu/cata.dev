@@ -47,7 +47,7 @@ pipeline {
         export AWS_DEFAULT_REGION=${env.AWS_DEFAULT_REGION}
         """
 
-        sh "aws s3 ls"
+        sh "aws s3 sync output/. s3://cata.dev --delete"
       }
     }
   }
